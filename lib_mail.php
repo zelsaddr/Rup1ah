@@ -1,4 +1,9 @@
 <?php
+/**
+ * @package TempMailKu
+ * @author Izzeldin Addarda <zeldin26@gmail.com>
+ */
+
 function getMail(){
     global $site;
     $mail = curl("".$site."user.php");
