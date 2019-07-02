@@ -1,4 +1,9 @@
 <?php
+/**
+ * @package Modulku
+ * @author Izzeldin Addarda <zeldin26@gmail.com>
+ */
+
 date_default_timezone_set("Asia/Jakarta");
 function save($name, $isi){
     $open = fopen($name, "a");
