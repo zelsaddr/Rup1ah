@@ -56,7 +56,7 @@ while(true){
     }else{
         echo "# FAILED REGISTER...\n";
     }
-    $sl = rand(600, 3600);
+    $sl = rand(600, 4000);
     echo "Will Sleep In ".$sl." Seconds.\n";
     sleep($sl);
 }
