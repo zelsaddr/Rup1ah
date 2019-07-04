@@ -13,9 +13,6 @@ $sites = array(
     "https://megamail.cx/",
     "https://tempmailid.com/"
 );
-$site = $sites[array_rand($sites)];
-$get_mail = getMail();
-echo $site."\n";
 #########################################################################################################
 $headers = array();
 $headers[] = 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8';
@@ -23,14 +20,18 @@ $headers[] = 'User-Agent: Dalvik/2.1.0 (Linux; U; Android 9; '.RandomPhone().' B
 $headers[] = 'Host: freerupiah.online';
 $headers[] = 'Connection: Keep-Alive';
 #########################################################################################################
-$email      = $get_mail['currentmail'];
-$pin        = rand(111111, 555555);
-$name       = get_random_name();
-$refferal   = "3105"; // Your Refferal Code
-$imei       = imeiRandom();
-$alamat     = generate_address()['alamat'];
-#########################################################################################################
 while(true){
+    $site = $sites[array_rand($sites)];
+    $get_mail = getMail();
+    echo $site."\n";
+    #########################################################################################################
+    $email      = $get_mail['currentmail'];
+    $pin        = rand(111111, 555555);
+    $name       = get_random_name();
+    $refferal   = "3105"; // Your Refferal Code
+    $imei       = imeiRandom();
+    $alamat     = generate_address()['alamat'];
+    #########################################################################################################
     $post_data = array(
         "telp"      => $email,
         "pin"       => $pin,
