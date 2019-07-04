@@ -54,11 +54,11 @@ while(true){
         preg_match('#berikut : (.*?)</div>#si', $read, $verif_url);
         isset($verif_url[1]) ? $msg = curl(trim($verif_url[1]))[1] : $msg = "# NO VERIF URL\n";
         echo preg_match("/SUKSES/i", $msg) == true ? "# VERIFIKASI DONE\n" : $msg;
+        $sl = rand(600, 4000);
+        echo "Will Sleep In ".$sl." Seconds.\n";
+        sleep($sl);
     }else{
         echo "# FAILED REGISTER...\n";
     }
-    $sl = rand(600, 4000);
-    echo "Will Sleep In ".$sl." Seconds.\n";
-    sleep($sl);
 }
 ?>
